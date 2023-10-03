@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <div class="add-task-container">
+      <input type="text" id="task" placeholder="Task">
+      <input type="number" id="hours" placeholder="Hours">
+      <select id="priority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <input type="datetime-local" id="reminder" placeholder="Reminder">
+      <input type="date" id="due-date" placeholder="Due date"> <!-- Add the due date input field -->
+      <button id="add-task">Add</button>
+    </div>
+    <div class="toggle-container">
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </div>
+    <ul id="task-list"></ul>
+    <div class="highlight-container">
+      <h2>Highlights of the Day</h2>
+      <input type="file" id="image-upload">
+      <button id="create-highlight">Create Highlight</button>
+      <ul id="highlight-list"></ul>
+      <h2>Motivation Quotes</h2>
+      <ul id="motivation-quotes-list"></ul>
+      <audio id="background-music" src="backgroundmusic.mp3" loop></audio>
+    </div>
+    <div class="calendar-container">
+      <div class="calendar">
+        <div class="calendar-header">
+          <button id="prev-month">&lt;</button>
+          <h3 id="calendar-month-year"></h3>
+          <button id="next-month">&gt;</button>
+        </div>
+        <div class="calendar-weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="calendar-days"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

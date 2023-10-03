@@ -1,0 +1,323 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-task-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-task-container input[type="text"],
+.add-task-container input[type="number"],
+.add-task-container select,
+.add-task-container input[type="datetime-local"],
+.add-task-container input[type="date"] {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.add-task-container button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-container button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.task-item.high {
+  background-color: #f44336;
+  color: white;
+}
+
+.task-item.medium {
+  background-color: #ff9800;
+  color: white;
+}
+
+.task-item.low {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+}
+
+.task-item .delete-button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task-item .due-date {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Add styling for the dark mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .add-task-container input[type="text"],
+.dark-mode .add-task-container input[type="number"],
+.dark-mode .add-task-container select,
+.dark-mode .add-task-container input[type="datetime-local"],
+.dark-mode .add-task-container input[type="date"],
+.dark-mode .toggle-container button,
+.dark-mode .task-item {
+  background-color: #222;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark-mode .task-item.high {
+  background-color: #f44336;
+}
+
+.dark-mode .task-item.medium {
+  background-color: #ff9800;
+}
+
+.dark-mode .task-item.low {
+  background-color: #4CAF50;
+}
+
+.dark-mode .task-item.completed {
+  text-decoration-color: #fff;
+}
+
+.dark-mode .task-item .delete-button {
+  background-color: #f44336;
+}
+
+.dark-mode .task-item .due-date {
+  color: #ccc;
+}
+
+.highlight-container {
+  margin-top: 20px;
+}
+
+.highlight-container h2 {
+  text-align: center;
+}
+
+.highlight-container input[type="file"] {
+  margin-right: 10px;
+}
+
+.highlight-container button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.highlight-container .highlight-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.highlight-container .highlight-item img {
+  max-width: 100px;
+  max-height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Add styling for the dark mode */
+.dark-mode .highlight-container {
+  background-color: #222;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark-mode .highlight-container h2 {
+  color: #fff;
+}
+
+.dark-mode .highlight-container input[type="file"],
+.dark-mode .highlight-container button,
+.dark-mode .highlight-container .highlight-item img {
+  background-color: #444;
+  color: #fff;
+  border-color: #666;
+}
+
+.dark-mode .highlight-container .highlight-item img {
+  border-color: #888;
+}
+
+.highlight-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.complete-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#motivation-quotes-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#motivation-quotes-list li {
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 20px;
+  color: #555;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#motivation-quotes-list:before {
+  content: none; /* Add this line to hide the "Motivation Quotes" line */
+}
+
+.calendar-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.calendar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.calendar:hover {
+  transform: scale(1.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.calendar-weekdays {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.calendar-weekdays {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333; /* Add this line to change the color of the weekdays */
+}
+
+.calendar-days {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.calendar-day {
+  width: calc(100% / 7);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #f2f2f2;
+}.calendar-weekdays div {
+  width: calc(100% / 7);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333; /* Add this line to change the color of the weekdays */
+}
+.dark-mode .calendar-day {
+  color: black;
+}
